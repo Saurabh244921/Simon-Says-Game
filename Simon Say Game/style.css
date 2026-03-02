@@ -15,16 +15,20 @@ body{
     justify-content: center;
 }
 
-.c1{
-    background-color: #8EE0A9;
+.green{
+    background-color: #35ad5d;
 }
 
-.c2{
-    background-color: #63EAE1;
+.red{
+    background-color: #ff0000;
 }
-.c3{
-    background-color: #F47A7A;
+.blue{
+    background-color: #0601ff;
 }
-.c4{
-    background-color: #C9AF46;
+.yellow{
+    background-color: #ffde58;
+}
+
+.flash{
+    background-color: white;
 }
