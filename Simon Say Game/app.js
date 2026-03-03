@@ -18,7 +18,7 @@ function btnFlash(btn){
         btn.classList.remove("flash");
     }, 200);
 }
-
+// checking the user input with the game pattern
 function checkAns(idx){
     if(gamePattern[idx] === userPattern[idx]){
         if(userPattern.length == gamePattern.length){
