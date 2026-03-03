@@ -25,8 +25,10 @@ function checkAns(idx){
             setTimeout(levelUp, 1000);
         }
     } else {
-        h2.innerText = "Game Over! Press any key to restart";
+        h2.innerHTML = `Game Over! Your Score is <b>${level}</b>. <br>Press any key to restart`;
+        reset();
     }
+    
 }
 
 function levelUp(){
@@ -43,13 +45,19 @@ function levelUp(){
 function btnPress(){
 let btn = this;
 btnFlash(btn);
-let userbtn = btn.getAttribute("id");
-userPattern.push(userbtn);
-console.log(userPattern);
+let btncolor = btn.getAttribute("id");
+userPattern.push(btncolor);
 checkAns(userPattern.length - 1);
 }
 
 let allBtns = document.querySelectorAll(".btn");
 for(btn of allBtns){
     btn.addEventListener("click", btnPress);
+}
+
+function reset(){
+    started = false;
+    level = 0;
+    gamePattern = [];
+    userPattern = [];
 }
